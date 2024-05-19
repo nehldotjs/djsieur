@@ -1,0 +1,45 @@
+.footer-container {
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+}
+
+.footer-context {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+}
+
+.footer-container h2 {
+    margin: auto;
+    font-size: 80px;
+    font-family: "Jaini Purva", system-ui;
+}
+
+.footer-icon-wrapper {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    height: auto;
+}
+
+.footer-socialLinks {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    transition: all 350ms ease-in-out;
+}
+
+.footer-socialLinks:hover {
+    transform: scale(1.5, 1.5);
+}

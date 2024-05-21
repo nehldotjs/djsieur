@@ -5,17 +5,20 @@ import ScreenHandler from "./ScreenHandler";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { DataProvider } from "./context/DataProvider";
+import { PropStateContext } from "./context/PropStateContext";
 
 const App = () => {
   return (
     <Router>
-      <DataProvider>
-        <div className="App">
-          <Nav />
-          <ScreenHandler />
-          <Footer />
-        </div>
-      </DataProvider>
+      <PropStateContext>
+        <DataProvider>
+          <div className="App">
+            <Nav />
+            <ScreenHandler />
+            <Footer />
+          </div>
+        </DataProvider>
+      </PropStateContext>
     </Router>
   );
 };

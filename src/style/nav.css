@@ -1,3 +1,6 @@
+ @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&family=Shadows+Into+Light&display=swap');
+
+
  .nav-wrapper {
      width: 100%;
      display: flex;
@@ -6,8 +9,7 @@
      align-items: flex-end;
      justify-content: flex-end;
 
-     z-index: 999;
-     background: linear-gradient(to bottom, #16161694, transparent);
+     z-index: 99999999999999;
 
  }
 
@@ -21,10 +23,29 @@
      justify-content: space-between;
  }
 
- .nav-logoContainer h3 {
-     font-family: "Jaini Purva", system-ui;
-     color: #ff8a00;
-     font-size: 50px;
+ .nav-logoContainer .nav-logo {
+     font-family: "Reddit Mono", monospace;
+     color: #fff;
+     font-size: 30px;
+ }
+
+ .nav-logoWrapper {
+     display: flex;
+     height: auto;
+     flex: 1;
+     overflow: hidden;
+     justify-content: center;
+     align-items: center;
+     background-color: skyblue;
+ }
+
+ .nav-logoWrapper .logo {
+     height: auto;
+     color: white;
+     width: 50px;
+     object-fit: contain;
+     display: flex;
+     margin: auto;
  }
 
  .nav-button {
@@ -49,11 +70,11 @@
  }
 
  .btnanimation-line1 {
-     background-color: #ff8a00;
+     background-color: #f8f8f8;
      transition: all 350ms ease-in-out;
      content: "";
      width: 100%;
-     height: 4px;
+     height: 1px;
      display: flex;
      top: 15px;
      position: absolute;
@@ -63,11 +84,11 @@
      transition: all 350ms ease-in-out;
      content: "";
      width: 100%;
-     height: 4px;
+     height: 1px;
      display: flex;
      margin: auto;
      position: absolute;
-     background-color: #ff8a00;
+     background-color: #f8f8f8;
 
  }
 
@@ -75,11 +96,11 @@
      transition: all 350ms ease-in-out;
      content: "";
      width: 100%;
-     height: 4px;
+     height: 1px;
      display: flex;
      bottom: 15px;
      position: absolute;
-     background-color: #ff8a00;
+     background-color: #f8f8f8;
  }
 
  .line1Animation {
@@ -93,7 +114,7 @@
 
  .line3Animation {
      transform: rotate(-135deg);
-     background-color: #ff8a00;
+     background-color: #f8f8f8;
      bottom: unset;
  }
 
@@ -108,20 +129,18 @@
  }
 
  .nav-sideMenu-context {
-     width: 400px;
+     width: auto;
      height: auto;
-     padding-left: 100px;
-
 
      display: flex;
      align-items: center;
      justify-content: center;
      position: relative;
+     padding-right: 20px;
 
-     transition: all 350ms ease-in-out;
-
+     transition: all 500ms ease-in-out;
      transform: translatey(-100%);
-     -webkit-backdrop-filter: blur(5px);
+     backdrop-filter: blur(5px);
  }
 
  .sideMenuAnimation {
@@ -133,55 +152,53 @@
      display: flex;
      height: auto;
      width: 100%;
-     gap: 20px;
-     justify-content: space-between;
+      justify-content: space-between;
      flex-direction: column;
      align-items: center;
      padding-top: 50px;
-     backdrop-filter: blur(5px);
-     background-color: #1a1a1a54;
- 
+
  }
 
  .nav-links {
      display: flex;
      text-decoration: none;
      text-transform: uppercase;
+     position: relative;
      font-weight: bold;
-     font-size: 12px;
      height: auto;
      width: 100%;
-     color: #1a1a1a;
-     position: relative;
 
-     background: linear-gradient(to bottom right, #fff, transparent);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
 
      justify-content: flex-end;
      transition: all ease-in-out 400ms;
  }
 
  .nav-links:hover {
-     background: linear-gradient(to bottom right, #fff, white);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
      background-clip: text;
-     -webkit-text-fill-color: transparent;
+     font-family: "Reddit Mono", monospace;
+     color: #0f1016;
+
+
+     /* background: linear-gradient(to bottom right, #fff, white); */
+     /* -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; */
+
  }
 
  .nav-links h3 {
      width: 100%;
-     display: flex;
      height: 100%;
+     display: flex;
+     font-size: 75px;
+     color: #c7caeb;
+     padding-right: 20px;
      align-items: center;
      justify-content: flex-start;
-     padding-left: 10px;
-     font-size: 50px;
-     /* background-color: hsla(0, 0%, 10%, 0.479); */
-     /* z-index: 2; */
+
+     font-weight: lighter;
+     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
  }
 
  .nav-links::after {
@@ -190,14 +207,56 @@
      content: "";
      z-index: -1;
      width: 2%;
-     height: 80%;
-     background-color: #ff8a00;
+     height: 40%;
      border-radius: 0px;
+     background-color: rgb(33, 34, 36);
      transition: all 350ms ease-in-out;
+
+
+     border-radius: 0px 0px 0px 20px;
  }
 
  .nav-links:hover::after {
      width: 100%;
      height: 100%;
      border-radius: 0px 0px 0px 0px;
+ }
+
+ .nav-whatsapp-wrapper {
+     position: fixed;
+     bottom: 50px;
+     right: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+
+     z-index: 99999999999999;
+ }
+
+ .whatsapp-wrapper {
+     background-color: #1616163f;
+     backdrop-filter: blur(5px);
+
+     text-decoration: none;
+     height: 50px;
+     width: 50px;
+     margin: auto;
+     display: flex;
+     border-radius: 50%;
+     padding: 5px;
+ }
+
+ .nav-whatsapp-icon {
+     height: 100%;
+     width: 100%;
+     color: white;
+     transition: all 350ms ease-in-out;
+
+ }
+
+ .nav-whatsapp-icon:hover {
+     height: 100%;
+     width: 100%;
+     transform: scale(1.5, 1.5);
  }

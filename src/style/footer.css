@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 50vh;
+    height: 40vh;
+    z-index: -1;
 }
 
 .footer-context {
@@ -18,7 +19,7 @@
 .footer-container h2 {
     margin: auto;
     font-size: 80px;
-    font-family: "Jaini Purva", system-ui;
+    font-family: "Reddit Mono", monospace;
 }
 
 .footer-icon-wrapper {

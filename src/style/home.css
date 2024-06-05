@@ -74,8 +74,9 @@
 }
 
 .hs-context h1 {
-    font-size: 50px;
-    line-height: 60px;
+    font-weight: lighter;
+    font-size: 60px;
+    /* line-height: 60px; */
     text-align: center;
     text-transform: uppercase;
 
@@ -127,6 +128,316 @@
     width: 100px;
     font-family: "Shadows Into Light", cursive;
 
+}
+
+.hs-headerTag {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+}
+
+.hs-headerTag h1 {
+    font-size: 160px;
+    line-height: 150px;
+    font-weight: lighter;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+}
+
+.hs-section2 {
+    background-color: #f8f8f8;
+    height: auto;
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.hs-s2-imageWrapper {
+    height: auto;
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.hs-g-imgAndContext {
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+}
+
+.hs-s2-imageWrapper .hs-gallery {
+    height: auto;
+    width: 100%;
+    display: flex;
+    object-fit: contain;
+}
+
+.hs-g-imgAndContext p {
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    text-align: justify;
+    word-spacing: 2px;
+}
+
+.hs-s2-imageWrapper .hs-gallery1 {
+    height: auto;
+    width: 250px;
+    display: flex;
+    object-fit: contain;
+}
+
+.hs-section3 {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.hs-section3-header {
+    justify-content: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hs-section3-header h1 {
+    font-size: 100px;
+    display: flex;
+    margin: auto;
+    font-weight: lighter;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.hs-section3-header p {
+    width: 50%;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: gray;
+    height: auto;
+    display: flex;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hs-image-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    height: auto;
+    width: 100%;
+}
+
+.hs-image-wrapper .hs-cards {
+    height: auto;
+    width: 150px;
+    display: flex;
+    object-fit: contain;
+
+}
+
+.hs-image-wrapper .hs-active {
+    width: 350px;
+}
+
+.hs-appointmentBtn {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.hs-appointmentBtn .hs-a-btn {
+    width: 80%;
+    border: 2px solid #1b1b1b1b;
+    background-color: transparent;
+    display: flex;
+    height: auto;
+    width: 80%;
+
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin: auto;
+    cursor: pointer;
+}
+
+.hs-appointmentBtn .hs-a-btn::after {
+    content: "";
+    display: flex;
+    height: 20px;
+    width: 10px;
+
+    position: absolute;
+    background-color: #1b1b1b;
+    border-radius: 0px 20px 0px 0px;
+
+    transition: all 350ms ease-in-out;
+}
+
+.hs-appointmentBtn .hs-a-btn:hover::after {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.hs-appointmentBtn .hs-a-btn h1 {
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px;
+
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    display: flex;
+    margin: auto;
+    z-index: 2;
+}
+
+
+.fancy { 
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+
+    width: 60%;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    width: 100%;
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #f8f8f8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #f8f8f8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #f8f8f8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: black;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
 }
 
 @media screen and (max-width:900px) {

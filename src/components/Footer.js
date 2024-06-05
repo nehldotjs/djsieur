@@ -22,10 +22,8 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-context">
-        <Link
-          to={"/djsieur/"}
-          style={{ textDecoration: "none", color: "black" }}>
-          <h2 data-aos="zoom-in-up">Dj SIEUR</h2> 
+        <Link to="/djsieur/" style={{ textDecoration: "none", color: "black" }}>
+          <h2 data-aos="zoom-in-up">Dj Elvis</h2>
         </Link>
         <p data-aos="zoom-in-up">© 2024 All rights reserved / What A Music</p>
         <div className="footer-icon-wrapper">

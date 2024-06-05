@@ -9,8 +9,8 @@ function ScreenHandler() {
   return (
     <Routes>
       <Route path="/djsieur/" exact element={<HomeScreen />} />
-      <Route path="/about" exact element={<About />} />
-      <Route path="/event" exact element={<Events />} />
+      <Route path="/djsieur/about" exact element={<About />} />
+      <Route path="/djsieur/event" exact element={<Events />} />
       {/* <Route path="/contact" exact element={<Contact />} /> */}
     </Routes>
   );

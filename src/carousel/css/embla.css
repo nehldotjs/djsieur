@@ -1,15 +1,18 @@
 .embla {
-    max-width: 90%;
+    max-width: 95%;
     margin: auto;
     height: auto;
     --slide-spacing: 1rem;
     --slide-size: 50%;
+
 }
 
 .embla__viewport {
     overflow: hidden;
     width: 100%;
 
+
+    background-color: pink;
 }
 
 .embla__container {
@@ -127,34 +130,44 @@
 .embla__parallax {
     /* border-radius: 1.8rem; */
     height: 100%;
+    background-color: green;
     overflow: hidden;
 }
 
 .embla__parallax__layer {
     position: relative;
-    height: auto;
+    height: 350px;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: orange;
 
 }
 
 .embla__parallax__img {
-    flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
-    height: 100%;
     width: 100%;
-    display: flex;
+    height: 100%;
 
-    justify-content: center;
+    display: flex;
+    object-fit: cover;
     align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
 }
 
 .embla__slide__img {
-    height: var(--slide-height);
-    border-radius: 1.8rem;
+
     object-fit: cover;
-    display: flex;
-    margin: auto;
     height: 100%;
     width: 100%;
+    display: flex;
+
+    /* height: var(--slide-height); */
+    /* object-fit: cover; */
+    /* margin: auto; */
+    /* border-radius: 1.8rem; */
+
 }

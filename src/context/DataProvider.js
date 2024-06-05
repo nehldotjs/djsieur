@@ -1,5 +1,12 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
+import E1 from "../assets/Elvis/1.jpg";
+import E2 from "../assets/Elvis/2.jpg";
+import E3 from "../assets/Elvis/3.jpg";
+import E4 from "../assets/Elvis/4.jpg";
+
+import EModel from "../assets/model.png";
+
 // Create the context
 const DataContext = createContext();
 
@@ -15,7 +22,7 @@ const getCurrentTime = () => {
   const ampm = hour >= 12 ? "PM" : "AM";
 
   hour = hour % 12;
-  hour = hour ? hour : 12; // the hour '0' should be '12'
+  hour = hour ? hour : 12;
 
   return {
     hour,
@@ -28,7 +35,6 @@ const getCurrentTime = () => {
   };
 };
 
-// Custom hook to use the data
 const useData = () => {
   const [time, setTime] = useState(getCurrentTime());
 
@@ -37,20 +43,18 @@ const useData = () => {
       setTime(getCurrentTime());
     }, 1000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
-  return time;
+  return { time, E1, E2, E3, E4, EModel };
 };
 
-// DataProvider component to wrap the application and provide the context
 const DataProvider = ({ children }) => {
-  const time = useData();
-  return <DataContext.Provider value={time}>{children}</DataContext.Provider>;
+  return (
+    <DataContext.Provider value={useData()}>{children}</DataContext.Provider>
+  );
 };
 
-// Custom hook to access the DataContext
 const useDataContext = () => {
   return useContext(DataContext);
 };

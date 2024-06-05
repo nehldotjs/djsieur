@@ -5,12 +5,12 @@ import useEmblaCarousel from "embla-carousel-react";
 import { usePrevNextButtons } from "./EmblaCarouselArrowButtons";
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { useDataContext } from "../context/DataProvider";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
-const EmblaCarousel = (props) => {
-  const { slides, options } = props;
-
+const EmblaCarousel = ({ slides, options }) => {
+  // const { setCarouselImageSelect } = useDataContext();
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
   const tweenFactor = useRef(0);
   const tweenNodes = useRef([]);
@@ -85,24 +85,28 @@ const EmblaCarousel = (props) => {
       .on("reInit", tweenParallax)
       .on("scroll", tweenParallax)
       .on("slideFocus", tweenParallax);
-  }, [emblaApi, tweenParallax]);
+  }, [emblaApi, setTweenNodes, setTweenFactor, tweenParallax]);
+
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map(({ id, img }) => (
-            <div className="embla__slide" key={id}>
-              <div className="embla__parallax">
-                <div className="embla__parallax__layer">
-                  <img
-                    className="embla__slide__img embla__parallax__img"
-                    src={img}
-                    alt="Your alt text"
-                  />
+          {slides.map((item) => {
+            const { id, img } = item;
+            return (
+              <div className="embla__slide" key={id}>
+                <div className="embla__parallax">
+                  <div className="embla__parallax__layer">
+                    <img
+                      className="embla__slide__img embla__parallax__img"
+                      src={img}
+                      alt="Your alt text"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

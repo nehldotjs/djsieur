@@ -5,10 +5,9 @@
      width: 100%;
      display: flex;
      position: fixed;
+     justify-content: flex-end;
      flex-direction: column;
      align-items: flex-end;
-     justify-content: flex-end;
-
      z-index: 99999999999999;
 
  }
@@ -16,6 +15,7 @@
  .nav-context {
      padding: 0% 5%;
      padding-top: 3%;
+     padding-left: 0px;
      width: 100%;
      display: flex;
      position: relative;
@@ -24,9 +24,16 @@
  }
 
  .nav-logoContainer .nav-logo {
+     width: 200px;
+     color: #0f1016;
+
+     padding-right: 5px;
+     font-size: 20px;
+     background-color: orangered;
      font-family: "Reddit Mono", monospace;
-     color: #fff;
-     font-size: 30px;
+     font-weight: normal;
+
+     text-align: right;
  }
 
  .nav-logoWrapper {
@@ -49,9 +56,12 @@
  }
 
  .nav-button {
-     height: 50px;
+     height: 40px;
      width: 40px;
      display: flex;
+
+     backdrop-filter: blur(5px);
+     background-color: rgba(37, 39, 61, 0.112);
 
  }
 
@@ -76,7 +86,7 @@
      width: 100%;
      height: 1px;
      display: flex;
-     top: 15px;
+     top: 12px;
      position: absolute;
  }
 
@@ -98,7 +108,7 @@
      width: 100%;
      height: 1px;
      display: flex;
-     bottom: 15px;
+     bottom: 12px;
      position: absolute;
      background-color: #f8f8f8;
  }
@@ -140,7 +150,6 @@
 
      transition: all 500ms ease-in-out;
      transform: translatey(-100%);
-     backdrop-filter: blur(5px);
  }
 
  .sideMenuAnimation {
@@ -152,11 +161,12 @@
      display: flex;
      height: auto;
      width: 100%;
-      justify-content: space-between;
+     justify-content: space-between;
      flex-direction: column;
      align-items: center;
      padding-top: 50px;
 
+     gap: 10px;
  }
 
  .nav-links {
@@ -168,7 +178,7 @@
      height: auto;
      width: 100%;
 
-
+     backdrop-filter: blur(5px);
      justify-content: flex-end;
      transition: all ease-in-out 400ms;
  }
@@ -187,18 +197,22 @@
 
  .nav-links h3 {
      width: 100%;
-     height: 100%;
+     height: auto;
      display: flex;
-     font-size: 75px;
+     font-size: 60px;
      color: #c7caeb;
      padding-right: 20px;
+     padding-left: 10px;
      align-items: center;
      justify-content: flex-start;
 
+     transition: all 350ms ease-in-out;
      font-weight: lighter;
      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
 
-
+ .nav-links h3:hover {
+     color: black;
  }
 
  .nav-links::after {
@@ -209,7 +223,7 @@
      width: 2%;
      height: 40%;
      border-radius: 0px;
-     background-color: rgb(33, 34, 36);
+     background-color: orangered;
      transition: all 350ms ease-in-out;
 
 

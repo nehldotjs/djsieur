@@ -23,9 +23,9 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-context">
         <Link to="/djsieur/" style={{ textDecoration: "none", color: "black" }}>
-          <h2 data-aos="zoom-in-up">Dj Elvis</h2>
+          <h2 data-aos="zoom-in-up"> Elvis</h2>
         </Link>
-        <p data-aos="zoom-in-up">© 2024 All rights reserved / What A Music</p>
+        <p data-aos="zoom-in-up">© 2024 All rights reserved</p>
         <div className="footer-icon-wrapper">
           <Link
             data-aos="zoom-in-up"

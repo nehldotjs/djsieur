@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.homeWrapper {
+    background: linear-gradient(to bottom, transparent, #0f1016);
+}
+
 .hs-wrapper {
     display: flex;
     width: 100%;
@@ -5,6 +12,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+
 }
 
 .hs-imageContainer {
@@ -21,7 +30,6 @@
     padding-top: 5%;
     z-index: -1;
 
-
 }
 
 .hs-image-word-mask {
@@ -33,12 +41,11 @@
     height: auto;
     transform: rotate(-90deg);
     margin: auto;
-    mix-blend-mode: multiply;
+    /* mix-blend-mode: multiply; */
 }
 
 .hs-image-word-mask h1 {
     font-size: 150px;
-    color: #ff8a00;
     display: flex;
     letter-spacing: -10px;
 
@@ -79,6 +86,11 @@
     /* line-height: 60px; */
     text-align: center;
     text-transform: uppercase;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 
 
     background: linear-gradient(45deg, transparent, white, transparent);
@@ -86,48 +98,85 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+
 }
 
 .hs-date-time-wrapper {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1% 5%;
+    padding: unset;
+    gap: 0px;
+}
 
+.hs-date-time-wrapper .timeanddateline1,
+.hs-date-time-wrapper .timeanddateline2,
+.hs-date-time-wrapper .timeanddateline3 {
+    display: flex;
+    height: 1px;
+    margin: auto;
+    background-color: #464959;
+
+}
+
+.timeanddateline1 {
+    width: 10%;
+}
+
+
+.timeanddateline2 {
+    flex: 1;
+}
+
+.timeanddateline3 {
+    width: 5%;
 }
 
 .hs-time-container {
     display: flex;
+
+    padding: 0px 10px;
 }
 
 
 .hs-date-wrapper {
     display: flex;
-    gap: 20px;
-    width: 20rem;
+    width: 10rem;
     justify-content: flex-end;
 }
 
 .hs-date-wrapper p,
-.hs-time-container p {
+.hs-time-container p,
+.hs-time-container p span {
+    text-transform: lowercase;
     display: flex;
     color: white;
-    font-size: 20px;
-    /* letter-spacing: 5px; */
-    font-family: "Shadows Into Light", cursive;
+    font-size: 15px;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+
+    letter-spacing: 5px;
+    word-spacing: 5px;
 }
 
 .hs-time-container p {
     display: flex;
+
+
+
     /* background-color: skyblue; */
 }
 
-.hs-time-container p span {
-    width: 100px;
-    font-family: "Shadows Into Light", cursive;
-
+.hs-section2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: column;
 }
 
 .hs-headerTag {
@@ -135,11 +184,11 @@
     height: auto;
     align-items: center;
     justify-content: center;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
 }
 
 .hs-headerTag h1 {
-    font-size: 160px;
+    font-size: 150px;
     line-height: 150px;
     font-weight: lighter;
     width: 100%;
@@ -148,17 +197,11 @@
     justify-content: center;
     align-items: center;
     text-align: left;
+    text-wrap: wrap;
 
+    color: white;
 }
 
-.hs-section2 {
-    background-color: #f8f8f8;
-    height: auto;
-    width: 100%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-}
 
 .hs-s2-imageWrapper {
     height: auto;
@@ -185,11 +228,13 @@
 }
 
 .hs-g-imgAndContext p {
-    font-size: 20px;
+    font-size: 12px;
     display: flex;
     margin: auto;
     text-align: justify;
     word-spacing: 2px;
+
+    color: #f8f8f8;
 }
 
 .hs-s2-imageWrapper .hs-gallery1 {
@@ -208,6 +253,9 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 20px;
+    padding-bottom: 2%;
+
+    background-color: #f8f8f8;
 }
 
 .hs-section3-header {
@@ -327,7 +375,7 @@
 }
 
 
-.fancy { 
+.fancy {
     background-color: transparent;
     border: 2px solid #000;
     border-radius: 0;
@@ -443,5 +491,111 @@
 @media screen and (max-width:900px) {
     .hs-context h1 {
         text-align: left;
+    }
+
+    .hs-headerTag h1 {
+        font-size: 60px;
+        line-height: 60px;
+        margin: 10px 0px;
+        text-align: center;
+
+    }
+
+    .hs-s2-imageWrapper {
+        height: auto;
+        width: 80%;
+        gap: 20px;
+        display: flex;
+        align-items: flex-start;
+        margin: auto;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hs-g-imgAndContext {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        object-fit: contain;
+    }
+
+    .hs-s2-imageWrapper .hs-gallery1 {
+        height: auto;
+        width: 80%;
+        display: flex;
+        object-fit: contain;
+    }
+
+    .hs-section3 {
+        padding-bottom: 50px;
+        display: flex;
+    }
+
+    .hs-section3-header {
+        justify-content: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hs-section3-header h1 {
+        font-size: 50px;
+        display: flex;
+        margin: auto;
+        font-weight: lighter;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hs-image-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 80%;
+        gap: 20px;
+    }
+
+    .hs-image-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .hs-image-container:nth-child(2) {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .hs-image-wrapper .hs-cards {
+        height: auto;
+        width: 200px;
+        display: flex;
+        object-fit: contain;
+        left: 0px;
+    }
+
+    .hs-image-wrapper .hs-active {
+        width: 200px;
+        right: 0px;
+    }
+
+    .hs-g-imgAndContext p {
+        font-size: 15px;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .hs-section {
+        background-color: red;
     }
 }

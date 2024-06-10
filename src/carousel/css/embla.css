@@ -10,9 +10,6 @@
 .embla__viewport {
     overflow: hidden;
     width: 100%;
-
-
-    background-color: pink;
 }
 
 .embla__container {
@@ -130,7 +127,6 @@
 .embla__parallax {
     /* border-radius: 1.8rem; */
     height: 100%;
-    background-color: green;
     overflow: hidden;
 }
 
@@ -141,7 +137,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: orange;
 
 }
 
@@ -153,9 +148,7 @@
     object-fit: cover;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
-
 }
 
 .embla__slide__img {

@@ -16,6 +16,7 @@ import userImage4 from "../assets/Elvis/4.jpg";
 
 import SvgLogo from "../assets/logoSvg.svg";
 import { BiSquare } from "react-icons/bi";
+import CardCarousel from "../Card/CardCarousel";
 
 function About() {
   // const { carouselImageSelect, setCarouselImageSelect } = useDataContext();
@@ -84,11 +85,12 @@ function About() {
           <p>
             <ReactTyped
               strings={[
-                "With a passion for music and genre-blending skills, DJ Sieur delivers  dynamic and immersive sets. Relive past shows in the gallery and see behind-the-scenes magic.  Welcome to DJ Sieur's world—let the music  move you!"
+                "With a passion for music and genre-blending skills, DJ Sieur delivers  dynamic and immersive sets. Relive past shows in the gallery and see behind-the-scenes magic.  Welcome to DJ Sieur's world let the music  move you!"
               ]}
               typeSpeed={10}
               backSpeed={50}
               loop={false}
+              cursorChar=""
             />
           </p>
 
@@ -115,6 +117,9 @@ function About() {
             }}>
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </div>
+
+          {/* <CardCarousel /> */}
+
         </div>
       </div>
     </>

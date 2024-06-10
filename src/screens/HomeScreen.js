@@ -31,7 +31,7 @@ function HomeScreen() {
   }, []);
 
   return (
-    <>
+    <div className="homeWrapper">
       <div className="hs-wrapper">
         <div className="hs-imageContainer">
           <img loading="lazy" src={EModel} alt="" data-aos="zoom-in-up" />
@@ -47,21 +47,21 @@ function HomeScreen() {
                 typeSpeed={50}
                 backSpeed={50}
                 loop={false}
+                cursorChar=""
               />
             </h1>
           </div>
           <div className="hs-date-time-wrapper">
+            <div className="timeanddateline1"></div>
             <div className="hs-time-container">
               <p data-aos="zoom-in-up">
-                <span>
-                  {time.hour} : {time.minute} : {time.second}
-                </span>{" "}
-                {time.ampm}
+                {time.hour} {time.minute} {time.second} {time.ampm}
               </p>
             </div>
+            <div className="timeanddateline2"></div>
             <div className="hs-date-wrapper">
               <p data-aos="zoom-in-up">
-                {time.month} - {time.day} - {time.year}
+                {time.month} {time.day}
               </p>
             </div>
           </div>
@@ -70,14 +70,22 @@ function HomeScreen() {
 
       <div className="hs-section2">
         <div className="hs-headerTag">
-          <h1>A SPACE THAT SPARKS DIALOGUE</h1>
+          <h1 data-aos="zoom-in-up">
+            <ReactTyped
+              strings={["A SPACE THAT SPARKS DIALOGUE"]}
+              typeSpeed={50}
+              backSpeed={50}
+              loop={false}
+              cursorChar=""
+            />
+          </h1>
         </div>
 
         <div className="hs-s2-imageWrapper">
-          <img src={E3} alt="" className="hs-gallery1" />
+          <img src={E3} alt="" className="hs-gallery1" data-aos="zoom-in-up" />
           <div className="hs-g-imgAndContext">
-            <img src={E2} alt="" className="hs-gallery" />
-            <p>
+            <img src={E2} alt="" className="hs-gallery" data-aos="zoom-in-up" />
+            <p data-aos="zoom-in-up">
               With a deep love for music and a knack for blending genres, i've
               carved a niche in the music industry, delivering sets that are
               both dynamic and immersive. From the hottest clubs to the biggest
@@ -86,35 +94,58 @@ function HomeScreen() {
             </p>
           </div>
         </div>
+      </div>
 
-        <div className="hs-section3">
-          <div className="hs-section3-header">
-            <h1>APPOINTMENTS</h1>
-            <p>
-              with a passion for creating unforgettable experiences, been
-              captivating audiences with his electrifying performances and
-              unique soundscapes.
-            </p>
+      <div className="hs-section3">
+        <div className="hs-section3-header">
+          <h1 data-aos="zoom-in-up">TRAVELS</h1>
+          <p data-aos="zoom-in-up">
+            With a passion for creating unforgettable experiences, been
+            captivating audiences with unique soundscapes.
+          </p>
+        </div>
+        <div className="hs-image-wrapper">
+          <div className="hs-image-container">
+            <img
+              src={E1}
+              alt=""
+              className="hs-cards"
+              data-aos="zoom-in-up"
+              loading="lazy"
+            />
           </div>
-          <div className="hs-image-wrapper">
-            <img src={E1} alt="" className="hs-cards" />
-            <img src={E4} alt="" className="hs-cards hs-active" />
-            <img src={E3} alt="" className="hs-cards" />
+          <div className="hs-image-container">
+            <img
+              src={E4}
+              alt=""
+              className="hs-cards hs-active"
+              data-aos="zoom-in-up"
+              loading="lazy"
+            />
           </div>
-
-          <div class="hs-appointmentBtn">
-            <button
-              class="fancy"
-              onclick="location.href='mailto:nehlzintoonz@gmail.com'">
-              <span class="top-key"></span>
-              <span class="text">SEND A MAIL</span>
-              <span class="bottom-key-1"></span>
-              <span class="bottom-key-2"></span>
-            </button>
+          <div className="hs-image-container">
+            <img
+              src={E3}
+              alt=""
+              className="hs-cards"
+              data-aos="zoom-in-up"
+              loading="lazy"
+            />
           </div>
         </div>
+
+        <div class="hs-appointmentBtn" data-aos="zoom-in-up">
+          <button
+            class="fancy"
+            onclick="location.href='mailto:nehlzintoonz@gmail.com'">
+            <span class="top-key"></span>
+            <span class="text">SEND A MAIL</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
